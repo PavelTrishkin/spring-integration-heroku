@@ -2,7 +2,7 @@ package geekbrains.home.des.domain;
 
 import java.util.List;
 
-public class Purchase {
+public class Sells {
     private Long purchaseID;
 
     private List<Sell> sells;

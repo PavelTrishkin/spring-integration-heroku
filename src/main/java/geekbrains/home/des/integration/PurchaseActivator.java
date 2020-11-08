@@ -2,7 +2,7 @@ package geekbrains.home.des.integration;
 
 
 
-import geekbrains.home.des.domain.Purchase;
+import geekbrains.home.des.domain.Sells;
 import geekbrains.home.des.domain.Sell;
 import org.springframework.integration.annotation.ServiceActivator;
 import org.springframework.messaging.handler.annotation.Headers;
@@ -24,7 +24,7 @@ public class PurchaseActivator {
     }
 
     @ServiceActivator(inputChannel = "purchaseChannel")
-    public void listenPurchaseChannel(@Payload Purchase purchase, @Headers Map<String, Object> headers){
+    public void listenPurchaseChannel(@Payload Sells purchase, @Headers Map<String, Object> headers){
         System.out.println("******************PURCHASE******************");
         System.out.println(purchase.toString());
         System.out.println("///////////////////HEADERS///////////////////");
